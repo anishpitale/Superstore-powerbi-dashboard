@@ -1,0 +1,43 @@
+-- DAX Measures Used in Superstore Power BI Dashboard --
+
+1) % Returned Orders =
+VAR _total_orders = DISTINCTCOUNT(Orders[Order ID])
+VAR _returned_orders = DISTINCTCOUNT(Returns[Order ID])
+RETURN DIVIDE(_returned_orders, _total_orders)
+
+2) Profit = SUM(Orders[Profit])
+
+3) Sales = SUM(Orders[Sales])
+
+4) % Returned Orders PY =
+CALCULATE(
+    [% Returned Orders],
+    SAMEPERIODLASTYEAR('Date Table'[Date])
+)
+
+5) Profit PY =
+CALCULATE(
+    [Profit],
+    SAMEPERIODLASTYEAR('Date Table'[Date])
+)
+
+6) Sales PY =
+CALCULATE(
+    [Sales],
+    SAMEPERIODLASTYEAR('Date Table'[Date])
+)
+
+7) vs PY - % Returned Orders =
+[% Returned Orders] - [% Returned Orders PY]
+
+8) vs PY - Profit =
+DIVIDE(
+    [Profit] - [Profit PY],
+    [Profit PY]
+)
+
+9) vs PY - Sales =
+DIVIDE(
+    [Sales] - [Sales PY],
+    [Sales PY]
+)
