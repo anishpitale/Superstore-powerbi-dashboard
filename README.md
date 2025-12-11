@@ -72,8 +72,8 @@ Sales PY  = CALCULATE(\[Sales], SAMEPERIODLASTYEAR('Date Table'\[Date]))
 
 **Variance vs Previous Year**
 
-vs PY - % Returned Orders = \[% Returned Orders] - \[% Returned Orders PY]
-vs PY - Profit = DIVIDE(\[Profit] - \[Profit PY], \[Profit PY])
+vs PY - % Returned Orders = \[% Returned Orders] - \[% Returned Orders PY]; 
+vs PY - Profit = DIVIDE(\[Profit] - \[Profit PY], \[Profit PY]); 
 vs PY - Sales  = DIVIDE(\[Sales] - \[Sales PY], \[Sales PY])
 
 
