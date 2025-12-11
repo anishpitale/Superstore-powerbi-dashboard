@@ -81,6 +81,4 @@ vs PY - Sales  = DIVIDE(\[Sales] - \[Sales PY], \[Sales PY])
 🎯 **Purpose:**
 Demonstrates BI dashboard building, data modeling, DAX, and analytics storytelling for portfolio and job applications.
 
-Dashboard:
-
 
